@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #B1F2E0;
+}
+
+.Contenedor{
+    position: relative;
+    width: 400px;
+    height: 105px;
+    background-color: white;
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.5s ease-out;
+}
+
+.search{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input{
+    color: rgb(4, 57, 56);
+    width: 80%;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 32px;
+}
+
+.search input::placeholder{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(4, 57, 56);
+    text-transform: capitalize;
+}
+
+.search button{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color:rgb(4, 57, 56) ;
+    background-color: rgb(214, 240, 252);
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease;
+}
+
+.search button:hover{
+    color: rgb(214, 240, 252);
+    background: rgb(4, 57, 56);
+}
+
+.search i{
+    position: absolute;
+    color: rgb(4, 57, 56) ;
+    font-size: 30px;
+}
+
+.Clima{
+    text-align: center;
+}
+
+.Clima img{
+    width: 60%;
+    margin-top: 30px;
+}
+
+.Clima .Temperatura{
+    position: relative;
+    color: rgb(4, 57, 56);
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-left: -16px;    
+}
+
+.Clima .Temperatura span{
+    position: absolute;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+
+.Clima .Descripcion{
+    color: rgb(4, 57, 56);
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.Detalles-Clima{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.Detalles-Clima .Humedad, .Detalles-Clima .Viento{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+
+.Detalles-Clima .Humedad{
+    padding-right: 20px;
+    justify-content: flex-start;
+}
+
+.Detalles-Clima .Viento{
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+.Detalles-Clima i{
+    color: rgb(4, 57, 56);
+    font-size: 26px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+.Detalles-Clima span{
+    color: rgb(4, 57, 56);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.Detalles-Clima p{
+    color: rgb(4, 57, 56);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.not-found {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+.not-found img{
+    width: 70%;
+}
+
+.not-found p{
+    color: rgb(4, 57, 56);
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.Clima, .Detalles-Clima{
+    scale: 0;
+    opacity: 0;
+}
+
+.fadeIn{
+    animation: 0.5s fadeIn forwards ;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn{
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
